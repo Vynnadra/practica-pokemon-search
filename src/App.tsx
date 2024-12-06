@@ -1,7 +1,20 @@
 import Search from "./components/Search";
+import Card from "./components/Card";
+import { useState } from "react";
 
 function App() {
-  return <Search />;
+  const [pokemonName, setPokemonName] = useState<string>("");
+
+  const handlePokemonChange = (newName: string) => {
+    setPokemonName(newName.toLowerCase());
+  };
+  console.log(pokemonName);
+  return (
+    <>
+      <Search onPokemonChange={handlePokemonChange} />
+      <Card pokemon={pokemonName} />
+    </>
+  );
 }
 
 export default App;
