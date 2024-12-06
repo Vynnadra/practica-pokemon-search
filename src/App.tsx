@@ -1,7 +1,7 @@
-import Titulo from "./Titulo";
+import Search from "./components/Search";
 
 function App() {
-  return <Titulo />;
+  return <Search />;
 }
 
 export default App;
