@@ -8,7 +8,6 @@ function App() {
   const handlePokemonChange = (newName: string) => {
     setPokemonName(newName.toLowerCase());
   };
-  console.log(pokemonName);
   return (
     <>
       <Search onPokemonChange={handlePokemonChange} />
