@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import "./Card.css";
 interface CardProps {
   pokemon: string;
 }
@@ -45,16 +45,26 @@ function CardBody(props: CardBodyProps) {
   }
   return (
     <>
-      <img src={pokemon.sprites.front_default} className="card-img-top" />
-      <div className="card-body">
-        <h5 className="card-title">
+      <img
+        src={pokemon.sprites.front_default}
+        className="card-img-top"
+        alt={pokemon.name}
+        style={{ height: "300px", objectFit: "cover" }}
+      />
+      <div className="card-body d-flex flex-column justify-content-between">
+        <h5 className="card-title text-center">
           {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
         </h5>
-        <p>
+        <ul className="list-unstyled d-flex flex-wrap justify-content-center gap-2">
           {pokemon.types.map((type: any, index: number) => (
-            <li key={index}>{type.type.name}</li>
+            <li key={index} className="text-muted">
+              <img
+                src={"/type/" + type.type.name + ".png"}
+                alt={type.type.name}
+              />
+            </li>
           ))}
-        </p>
+        </ul>
       </div>
     </>
   );

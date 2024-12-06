@@ -1,6 +1,7 @@
 import Search from "./components/Search";
 import Card from "./components/Card";
 import { useState } from "react";
+import "./App.css";
 
 function App() {
   const [pokemons, setPokemons] = useState<any[]>([]);
@@ -15,20 +16,23 @@ function App() {
           (pokemon: { name: string }) =>
             pokemon.name.toLowerCase().includes(newName.toLowerCase())
         );
-        const limitedPokemons = filteredPokemons.slice(0, 10);
+        const limitedPokemons = filteredPokemons.slice(0, 9);
         setPokemons(limitedPokemons);
       })
       .catch((err) => console.error("Error fetching Pokemon data:", err));
   };
   return (
-    <>
+    <div className="app-container">
       <Search onPokemonChange={handlePokemonChange} />
-      <div>
+
+      <div className="row row-cols-3 g-4">
         {pokemons.map((pokemon, index) => (
-          <Card key={index} pokemon={pokemon.name} />
+          <div className="col d-flex justify-content-center">
+            <Card key={index} pokemon={pokemon.name} />
+          </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

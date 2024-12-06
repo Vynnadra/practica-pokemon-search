@@ -1,0 +1,36 @@
+.input-group {
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-group .input-group-text {
+  background-color: #007bff;
+  color: white;
+  border-radius: 50px 0 0 50px;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+}
+
+.form-control {
+  border-radius: 0 50px 50px 0;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #007bff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+}
+
+.form-control::placeholder {
+  color: #999;
+}
+
+.input-group:hover .form-control {
+  border-color: #0056b3;
+}

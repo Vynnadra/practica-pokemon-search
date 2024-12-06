@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Search.css";
 
 interface SearchProps {
   onPokemonChange: (pokemonName: string) => void;
@@ -11,16 +12,18 @@ function Search({ onPokemonChange }: SearchProps) {
     onPokemonChange(e.target.value.toLowerCase());
   };
   return (
-    <div className="input-group">
-      <input
-        type="text"
-        className="form-control"
-        placeholder="Nombre del Pokemon"
-        aria-label="Buscador de Pokemon"
-        value={inputValue}
-        onChange={handleInputChange}
-      />
-    </div>
+    <>
+      <div className="input-group flex-nowrap">
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Nombre del Pokemon"
+          aria-label="addon-wrapping"
+          value={inputValue}
+          onChange={handleInputChange}
+        />
+      </div>
+    </>
   );
 }
 
