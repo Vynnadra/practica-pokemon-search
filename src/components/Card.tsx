@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import "./Card.css";
+
 interface CardProps {
+  /**
+   * El nombre del pokemon que se recibirá desde la App
+   * para buscarlo en la Api y regresar su card.
+   */
   pokemon: string;
 }
 
@@ -14,6 +19,11 @@ function Card(props: CardProps) {
 }
 
 interface CardBodyProps {
+  /**
+   * Exactamente lo mismo de arriba pero esto es netamente para
+   * promover la escalabilidad de nuestro componente
+   * para que en algun furuto podamos tener distintos tipos de Card.
+   */
   pokemonName: string;
 }
 

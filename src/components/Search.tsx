@@ -2,6 +2,15 @@ import { useState } from "react";
 import "./Search.css";
 
 interface SearchProps {
+  /**
+   * Funcion que maneja el cambio de nombre en el input, para
+   * realizar la busqueda de nuevas correspondencias.
+   * @param pokemonName
+   *
+   * Returna nada, osea, cambia el nombre al cual se
+   * le realizará la busqueda en el main
+   * @returns
+   */
   onPokemonChange: (pokemonName: string) => void;
 }
 

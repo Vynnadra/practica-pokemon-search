@@ -5,7 +5,16 @@ import "./App.css";
 
 function App() {
   const [pokemons, setPokemons] = useState<any[]>([]);
-
+  /**
+   * FUncion que maneja el cambio de nombre del pokemon en el
+   * input de busqueda, se realiza una busqueda que incluya newName
+   * para obtener todas las correspondencias, pero de estas decidimos
+   * utilizar unicamente 9 para mostrar en la pantalla, pero pueden ser mas.
+   *
+   *
+   * newName corresponde al nuevo nombre a buscar en la api.
+   * @param newName
+   */
   const handlePokemonChange = (newName: string) => {
     setPokemons([]);
 
@@ -21,6 +30,7 @@ function App() {
       })
       .catch((err) => console.error("Error fetching Pokemon data:", err));
   };
+
   return (
     <div className="app-container">
       <Search onPokemonChange={handlePokemonChange} />
