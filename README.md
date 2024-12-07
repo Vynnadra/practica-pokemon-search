@@ -1,30 +1,50 @@
-# React + TypeScript + Vite
+# Buscador de Pokemon
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto se realizo en linea para postular a Practicante en Bloom Reuse, este proyecto fue realizado en React+TypeScript+Vite.
 
-Currently, two official plugins are available:
+## Instalación
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Hay que tener instalado [Node.js](https://nodejs.org/), la instalacion puede ser diferente segun tu sistema operativo.
 
-## Expanding the ESLint configuration
+1. Clona el repo:
+   ```bash
+   git clone https://github.com/Vynnadra/practica-pokemon-search
+   ```
+2. Navega al directorio correspondiente:
+   ```bash
+   cd practica-pokemon-search
+   ```
+3. Instala las dependencias:
+   Para la creacion del proyecto se utilizó `npm` por lo que las indicaciónes sera para esta herramienta.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+   ```bash
+   npm install
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+4. Para ejecutar el proyecto:
+   ```bash
+   npm run dev
+   ```
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Uso
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+El uso de la aplicacion es el siguiente:
+
+Clickea encima de la barra de busqueda y tipea el pokemon que quieras buscar, a medida que vayas escribiendo te iran apareciendo hasta un maxiom de 9 pokemones que corresponden a coincidencias dentro de la API de PokeAPI.
+
+## Estructura del proyecto (solo directorios importantes)
+
+    |-public
+    |   |-type
+    |   |   |- ...chunksofimages...
+    |   |- pokemon.svg
+    |-src
+        |-components
+        |   |- Card.css
+        |   |- Card.tsx
+        |   |- Search.css
+        |   |- Search.tsx
+        |- App.css
+        |- App.tsx
+        |- index.css # unused
+        |- main.tsx
